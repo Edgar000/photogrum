@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "mail": "Beau12@hotmail.com",
+      "name": "Jamie Thiel II"
+    },
+    {
+      "id": 1,
+      "mail": "Buster_Johns@gmail.com",
+      "name": "Katrina Kozey III"
+    },
+    {
+      "id": 2,
+      "mail": "Charlie_Macejkovic74@hotmail.com",
+      "name": "Juliet Pacocha"
+    },
+    {
+      "id": 3,
+      "mail": "Bulah51@yahoo.com",
+      "name": "Ricardo Ratke"
+    },
+    {
+      "id": 4,
+      "mail": "Zane_Adams@gmail.com",
+      "name": "Maxime Kessler"
+    },
+    {
+      "id": 5,
+      "mail": "Moriah1@yahoo.com",
+      "name": "Golden Marks"
+    },
+    {
+      "id": 6,
+      "mail": "Jace.Schuppe85@yahoo.com",
+      "name": "Bud O'Reilly"
+    },
+    {
+      "id": 7,
+      "mail": "Alisha70@yahoo.com",
+      "name": "Dr. Lina Fadel"
+    },
+    {
+      "id": 8,
+      "mail": "Grant_Romaguera79@gmail.com",
+      "name": "Lurline Osinski"
+    },
+    {
+      "id": 9,
+      "mail": "Stefan.Predovic@hotmail.com",
+      "name": "Hubert Gottlieb"
+    }
+  ]
+}

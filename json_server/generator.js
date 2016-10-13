@@ -6,7 +6,9 @@ module.exports = function() {
             return {
                 id: n,
                 mail: faker.internet.email(),
-                name: faker.name.findName()
+                name: faker.name.findName(),
+                avatarUrl: faker.image.avatar(),
+                regDate: faker.date.past(5)
             }
         })
     }

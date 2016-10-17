@@ -10,9 +10,12 @@
     "lodash": "^4.16.4"
   },
   "devDependencies": {
+    "json-server": "^0.8.22",
     "webpack": "^1.13.2"
   },
   "scripts": {
+    "start": "webpack -w",
+    "serve": "json-server ./json_server/db.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

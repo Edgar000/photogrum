@@ -1,5 +1,5 @@
 'use strict';
 
-angular.module('userList', [
+angular.module('userProfile', [
     'ngRoute'
 ]);

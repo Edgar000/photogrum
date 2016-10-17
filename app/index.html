@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <!-- <script type="text/javascript" src="../bundle/bundle.js" charset="utf-8"></script> -->
     <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular-route/angular-route.js"></script>
     <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
     <script src="user-list/user-list.module.js"></script>
     <script src="user-list/user-list.component.js"></script>
+    <script src="user-profile/user-profile.module.js"></script>
+    <script src="user-profile/user-profile.component.js"></script>
 </head>
 <body>
-<user-list></user-list>
+<div ng-view></div>
 </body>
 </html>

@@ -1,0 +1,9 @@
+<div>
+    User id: {{$ctrl.user.id}}
+    <br>
+    User photos:
+    <br>
+</div>
+<div ng-repeat="photo in $ctrl.user.photos">
+    <img ng-src="{{photo.photoUrl}}" alt="{{photo.photoId}}"/>
+</div>

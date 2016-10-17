@@ -1,31 +1,28 @@
 <div>
-    <div>
-        <div>
-            Search:
-            <input ng-model="$ctrl.query"/>
-            <br>
-            <br>
-        </div>
-        <div>
-            Sort by:
-            <select ng-model="$ctrl.orderProp">
-                <option value="-regDate">Registration date</option>
-                <option value="name">Name</option>
-            </select>
-            <br>
-            <br>
-        </div>
-        <div>
-            <div ng-repeat="user in $ctrl.users | filter:$ctrl.query | orderBy:$ctrl.orderProp">
-                <a href="#">
-                    <img ng-src="{{user.avatarUrl}}" alt="{{user.name}}" />
-                </a>
-                <br>
-                <a href="#">{{user.name}}</a>
-                <p>e-mail: {{user.mail}}</p>
-                <p>registered: {{user.regDate}}</p>
-                <br>
-            </div>
-        </div>
-    </div>
+    Search:
+    <input ng-model="$ctrl.query"/>
+    <br>
+    <br>
+</div>
+<div>
+    Sort by:
+    <select ng-model="$ctrl.orderProp">
+        <option value="-regDate">Registration date</option>
+        <option value="name">Name</option>
+    </select>
+    <br>
+    <br>
+</div>
+<div ng-repeat="user in $ctrl.users | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+    <a href="#!/users/{{user.id}}">
+        <img ng-src="{{user.avatarUrl}}" alt="{{user.name}}"/>
+    </a>
+    <br>
+    <a href="#!/users/{{user.id}}">{{user.name}}</a>
+    <br>
+    e-mail: {{user.mail}}
+    <br>
+    registered: {{user.regDate}}
+    <br>
+    <br>
 </div>

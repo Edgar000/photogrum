@@ -1,5 +1,6 @@
-'use strict';
+const userProfile = require('./user-profile.component');
 
-angular.module('userProfile', [
-    'ngRoute'
-]);
+const userProfileModule = angular.module('userProfile', [])
+    .component('userProfile', userProfile);
+
+module.exports = userProfileModule;

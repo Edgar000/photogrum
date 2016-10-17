@@ -1,8 +1,4 @@
-'use strict';
-
-angular.
-module('userList').
-component('userList', {
+module.exports = {
     templateUrl: 'user-list/user-list.template.html',
     controller: ['$http',
         function UserListController($http) {
@@ -16,4 +12,4 @@ component('userList', {
             this.orderProp = '-regDate';
         }
     ]
-});
+};

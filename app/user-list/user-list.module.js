@@ -1,5 +1,6 @@
-'use strict';
+const userList = require('./user-list.component');
 
-angular.module('userList', [
-    'ngRoute'
-]);
+const userListModule = angular.module('userList', [])
+    .component('userList', userList);
+
+module.exports = userListModule;

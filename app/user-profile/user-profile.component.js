@@ -1,8 +1,4 @@
-'use strict';
-
-angular.
-module('userProfile').
-component('userProfile', {
+module.exports = {
     templateUrl: 'user-profile/user-profile.template.html',
     controller: ['$http', '$routeParams',
         function UserProfileController($http, $routeParams) {
@@ -15,4 +11,4 @@ component('userProfile', {
             });
         }
     ]
-});
+};

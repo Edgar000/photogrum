@@ -1,5 +1,5 @@
 export default {
-    templateUrl: 'user-profile/user-profile.template.html',
+    templateUrl: './app/user-profile/user-profile.template.html',
     controller: ['$http', '$routeParams',
         function UserProfileController($http, $routeParams) {
             var self = this;

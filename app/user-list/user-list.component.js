@@ -1,5 +1,5 @@
 export default {
-    templateUrl: 'user-list/user-list.template.html',
+    templateUrl: './app/user-list/user-list.template.html',
     controller: ['$http',
         function UserListController($http) {
             var self = this;

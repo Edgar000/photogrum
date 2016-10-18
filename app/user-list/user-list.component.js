@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     templateUrl: 'user-list/user-list.template.html',
     controller: ['$http',
         function UserListController($http) {
@@ -6,9 +6,9 @@ module.exports = {
             $http({
                 method: 'GET',
                 url: 'http://localhost:3000/users'
-            }).then(function (response) {
-                self.users = response.data;
-            });
+            }).then((response) =>
+                self.users = response.data
+            );
             this.orderProp = '-regDate';
         }
     ]

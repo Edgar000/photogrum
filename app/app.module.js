@@ -1,13 +1,11 @@
-const angular = require('angular');
-const ngRoute = require('angular-route');
-const userListModule = require('./user-list/user-list.module');
-const userProfileModule = require('./user-profile/user-profile.module');
-const config = require('./app.config');
+import angular from 'angular';
+import ngRoute from 'angular-route';
+import config from './app.config';
+import userList from './user-list/user-list.module';
+import userProfile from './user-profile/user-profile.module';
 
-const appModule = angular.module('app', [
+export default angular.module('app', [
     ngRoute,
-    userListModule.name,
-    userProfileModule.name
+    userList.name,
+    userProfile.name
 ]).config(config);
-
-module.exports = appModule;

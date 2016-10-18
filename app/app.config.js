@@ -1,4 +1,4 @@
-module.exports = function config($locationProvider, $routeProvider) {
+export default ($locationProvider, $routeProvider) => {
     $locationProvider.hashPrefix('!');
 
     $routeProvider.

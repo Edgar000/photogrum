@@ -1,1 +1,1 @@
-const app = require('./app.module');
+import app from './app.module';

@@ -1,6 +1,4 @@
-const userProfile = require('./user-profile.component');
+import userProfile from './user-profile.component';
 
-const userProfileModule = angular.module('userProfile', [])
+export default angular.module('userProfile', [])
     .component('userProfile', userProfile);
-
-module.exports = userProfileModule;

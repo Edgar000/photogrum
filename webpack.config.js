@@ -14,6 +14,11 @@ module.exports  = {
                 query: {
                     presets: ['es2015']
                 }
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'ng-annotate'
             }
         ]
     }

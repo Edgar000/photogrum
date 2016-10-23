@@ -18,6 +18,11 @@ module.exports  = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
+                loader: 'eslint'
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
                 loader: 'ng-annotate'
             }
         ]

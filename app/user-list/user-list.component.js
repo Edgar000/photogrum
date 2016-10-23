@@ -1,5 +1,5 @@
 export default {
-    templateUrl: './app/user-list/user-list.template.html',
+    template: require('./user-list.template.html'),
     controller: function UserListController($http) {
         'ngInject';
         var self = this;

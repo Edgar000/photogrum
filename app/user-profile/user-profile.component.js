@@ -1,5 +1,5 @@
 export default {
-    templateUrl: './app/user-profile/user-profile.template.html',
+    template: require('./user-profile.template.html'),
     controller: function UserProfileController($http, $routeParams) {
         'ngInject';
         var self = this;

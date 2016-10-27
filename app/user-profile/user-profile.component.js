@@ -1,13 +1,17 @@
 export default {
     template: require('./user-profile.template.html'),
-    controller: function UserProfileController($http, $routeParams) {
-        'ngInject';
-        var self = this;
-        $http({
-            method: 'GET',
-            url: 'http://localhost:3000/user' + $routeParams.userId
-        }).then((response) =>
-            self.user = response.data
-        );
-    }
+    controller: UserProfileController
 };
+
+export function UserProfileController($http, $stateParams) {
+    'ngInject';
+    const vm = this;
+    activate();
+
+    function activate(){
+        $http.get(`http://localhost:3000/user${$stateParams.userId}`) // TODO: make this user/0
+            .then(({data}) => {
+                vm.user = data;
+            });
+    }
+}

@@ -1,14 +1,18 @@
 export default {
     template: require('./user-list.template.html'),
-    controller: function UserListController($http) {
-        'ngInject';
-        var self = this;
-        $http({
-            method: 'GET',
-            url: 'http://localhost:3000/users'
-        }).then((response) =>
-            self.users = response.data
-        );
-        this.orderProp = '-regDate';
-    }
+    controller: UserListController
 };
+
+function UserListController($http) {
+    'ngInject';
+    const vm = this;
+    activate();
+
+    function activate() {
+        $http.get('http://localhost:3000/users')
+            .then(({data}) => {
+                vm.users = data;
+            });
+        vm.orderProp = '-regDate';
+    }
+}

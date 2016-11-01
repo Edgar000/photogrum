@@ -1,4 +1,5 @@
-import registrationPage from './registration-page.component';
+import pgRegistrationPage from './registration-page.component';
 
-export default angular.module('registrationPage', [])
-    .component('registrationPage', registrationPage);
+export default angular.module('pgRegistrationPage', [])
+    .component('pgRegistrationPage', pgRegistrationPage)
+    .name;

@@ -1,4 +1,5 @@
-import mainHeader from './main-header.component';
+import pgMainHeader from './main-header.component';
 
-export default angular.module('mainHeader', [])
-    .component('mainHeader', mainHeader);
+export default angular.module('pgMainHeader', [])
+    .component('pgMainHeader', pgMainHeader)
+    .name;

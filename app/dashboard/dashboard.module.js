@@ -1,4 +1,5 @@
-import dashboard from './dashboard.component';
+import pgDashboard from './dashboard.component';
 
-export default angular.module('dashboard', [])
-    .component('dashboard', dashboard);
+export default angular.module('pgDashboard', [])
+    .component('pgDashboard', pgDashboard)
+    .name;

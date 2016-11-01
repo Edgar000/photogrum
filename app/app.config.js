@@ -6,15 +6,15 @@ export default ($locationProvider, $stateProvider, $urlRouterProvider) => {
     $stateProvider
         .state('users', {
             url: '/users',
-            template: '<user-list></user-list>'
+            template: '<pg-user-list></pg-user-list>'
         })
         .state('user', {
             url: '/users/:userId',
-            template: '<user-profile></user-profile>'
+            template: '<pg-user-profile></pg-user-profile>'
         })
         .state('registration', {
             url: '/registration',
-            template: '<registration-page></registration-page>'
+            template: '<pg-registration-page></pg-registration-page>'
         })
         .state('login', {
             url: '/login',
@@ -22,7 +22,7 @@ export default ($locationProvider, $stateProvider, $urlRouterProvider) => {
         })
         .state('dashboard', {
             url: '/dashboard',
-            template: '<dashboard></dashboard>'
+            template: '<pg-dashboard></pg-dashboard>'
         })
         .state('photos', {
             url: '/photos',

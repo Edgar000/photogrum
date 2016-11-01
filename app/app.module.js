@@ -10,10 +10,10 @@ import dashboard from './dashboard/dashboard.module';
 
 export default angular.module('app', [
     uiRouter,
-    userList.name,
-    userProfile.name,
-    mainHeader.name,
-    mainFooter.name,
-    registrationPage.name,
-    dashboard.name
+    userList,
+    userProfile,
+    mainHeader,
+    mainFooter,
+    registrationPage,
+    dashboard
 ]).config(config);

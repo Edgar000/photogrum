@@ -1,4 +1,5 @@
-import mainFooter from './main-footer.component.js';
+import pgMainFooter from './main-footer.component.js';
 
-export default angular.module('mainFooter', [])
-    .component('mainFooter', mainFooter);
+export default angular.module('pgMainFooter', [])
+    .component('pgMainFooter', pgMainFooter)
+    .name;

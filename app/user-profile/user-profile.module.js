@@ -1,4 +1,5 @@
-import userProfile from './user-profile.component';
+import pgUserProfile from './user-profile.component';
 
-export default angular.module('userProfile', [])
-    .component('userProfile', userProfile);
+export default angular.module('pgUserProfile', [])
+    .component('pgUserProfile', pgUserProfile)
+    .name;

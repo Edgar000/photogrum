@@ -14,7 +14,7 @@ export default ($locationProvider, $stateProvider, $urlRouterProvider) => {
         })
         .state('registration', {
             url: '/registration',
-            template: ''
+            template: '<registration-page></registration-page>'
         })
         .state('login', {
             url: '/login',
@@ -22,12 +22,12 @@ export default ($locationProvider, $stateProvider, $urlRouterProvider) => {
         })
         .state('dashboard', {
             url: '/dashboard',
-            template: ''
+            template: '<dashboard></dashboard>'
         })
         .state('photos', {
             url: '/photos',
             template: ''
         });
 
-    $urlRouterProvider.otherwise('/users');
+    $urlRouterProvider.otherwise('/dashboard');
 };

@@ -11,6 +11,18 @@ module.exports = (config) => {
             {pattern: 'node_modules/angular-mocks/angular-mocks.js', watched: false},
             {pattern: 'app/**/*.spec.js', watched: false}
         ],
-        preprocessors: {'app/**/*.spec.js': ['webpack', 'sourcemap']}
+        preprocessors: {'app/**/*.spec.js': ['webpack', 'sourcemap']},
+        reporters: ['mocha', 'coverage'],
+        coverageReporter: {
+            reporters: [{type: 'text-summary'}, {type: 'html'}],
+            check: {
+                global: {
+                    statements: 95,
+                    branches: 95,
+                    functions: 95,
+                    lines: 95
+                }
+            }
+        }
     });
 };

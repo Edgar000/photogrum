@@ -16,6 +16,7 @@
     "babel-plugin-istanbul": "^2.0.3",
     "babel-preset-es2015": "^6.16.0",
     "chai": "^3.5.0",
+    "cross-env": "^3.1.3",
     "eslint": "^3.8.1",
     "eslint-config-angular": "^0.5.0",
     "eslint-loader": "^1.6.0",
@@ -41,8 +42,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "serve": "json-server ./json_server/db.json",
-    "test": "karma start --single-run=true",
-    "tdd": "karma start",
+    "test": "cross-env TDD_FLAG=0 karma start --single-run=true",
+    "tdd": "cross-env TDD_FLAG=1 karma start",
     "production": "webpack"
   },
   "author": "",

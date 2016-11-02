@@ -1,4 +1,5 @@
 const webpackConfig = require('./webpack.config.karma');
+const reporters = (process.env.TDD_FLAG == '1') ? ['mocha'] : ['mocha', 'coverage'];
 
 module.exports = (config) => {
     config.set({
@@ -12,7 +13,7 @@ module.exports = (config) => {
             {pattern: 'app/**/*.spec.js', watched: false}
         ],
         preprocessors: {'app/**/*.spec.js': ['webpack', 'sourcemap']},
-        reporters: ['mocha', 'coverage'],
+        reporters: reporters,
         coverageReporter: {
             reporters: [{type: 'text-summary'}, {type: 'html'}],
             check: {

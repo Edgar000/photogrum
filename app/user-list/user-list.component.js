@@ -3,7 +3,7 @@ export default {
     controller: UserListController
 };
 
-function UserListController($http) {
+export function UserListController($http) {
     'ngInject';
     const vm = this;
     activate();

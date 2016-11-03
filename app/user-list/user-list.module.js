@@ -1,4 +1,5 @@
-import userList from './user-list.component';
+import pgUserList from './user-list.component';
 
-export default angular.module('userList', [])
-    .component('userList', userList);
+export default angular.module('pgUserList', [])
+    .component('pgUserList', pgUserList)
+    .name;

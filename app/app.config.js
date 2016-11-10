@@ -27,6 +27,10 @@ export default ($locationProvider, $stateProvider, $urlRouterProvider) => {
         .state('photos', {
             url: '/photos',
             template: ''
+        })
+        .state('photo-item', {
+            url: '/users/:userId/photos/:photoId',
+            template: '<pg-photo-item></pg-photo-item>'
         });
 
     $urlRouterProvider.otherwise('/dashboard');

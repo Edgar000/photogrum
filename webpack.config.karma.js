@@ -18,6 +18,14 @@ module.exports = {
             {
                 test: /\.html$/,
                 loader: 'html'
+            },
+            {
+                test: /\.png$/,
+                loader: 'file'
+            },
+            {
+                test: /\.scss$/,
+                loaders: ['style', 'css', 'postcss', 'resolve-url', 'sass']
             }
         ]
     },

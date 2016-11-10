@@ -9,7 +9,7 @@ export function UserProfileController($http, $stateParams) {
     activate();
 
     function activate(){
-        $http.get(`http://localhost:3000/user${$stateParams.userId}`) // TODO: make this user/0
+        $http.get(`http://localhost:3000/users/${$stateParams.userId}`)
             .then(({data}) => {
                 vm.user = data;
             });

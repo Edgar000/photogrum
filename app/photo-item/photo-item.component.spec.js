@@ -7,6 +7,8 @@ describe('PhotoItemController', () => {
 
     beforeEach(inject((_$httpBackend_, _$http_) => {
         $httpBackend = _$httpBackend_;
+        $httpBackend.whenGET(`http://localhost:3000/users/${$stateParams.userId}`)
+            .respond(200, {photos: ['expected']});
 
         sut = new PhotoItemController(_$http_, $stateParams);
     }));
@@ -22,17 +24,23 @@ describe('PhotoItemController', () => {
         });
     });
 
-    describe('#raitingInc', () => {
+    describe('#like', () => {
         it('should increment rating counter and send updated data to backend for saving', () => {
-            $httpBackend.expectPUT(`http://localhost:3000/users/${$stateParams.userId}`, '')
-                .respond(200, '');
+            sut.photo = {ratingCount: 0};
+            sut.user = {photos: [{ratingCount: 0}]};
+            sut.like();
+            $httpBackend.expectPUT(`http://localhost:3000/users/${$stateParams.userId}`, {photos: [{ratingCount: 1}]})
+                .respond(200);
         });
     });
 
-    describe('#raitingInc', () => {
+    describe('#dislike', () => {
         it('should decrement rating counter and send updated data to backend for saving', () => {
-            $httpBackend.expectPUT(`http://localhost:3000/users/${$stateParams.userId}`, '')
-                .respond(200, '');
+            sut.photo = {ratingCount: 0};
+            sut.user = {photos: [{ratingCount: 0}]};
+            sut.like();
+            $httpBackend.expectPUT(`http://localhost:3000/users/${$stateParams.userId}`, {photos: [{ratingCount: -1}]})
+                .respond(200);
         });
     });
 });

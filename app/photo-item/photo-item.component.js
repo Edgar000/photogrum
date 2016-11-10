@@ -7,8 +7,8 @@ export function PhotoItemController($http, $stateParams) {
     'ngInject';
     const vm = this;
     activate();
-    vm.like = ratingInc;
-    vm.dislike = ratingDec;
+    vm.like = like;
+    vm.dislike = dislike;
 
     function activate(){
         $http.get(`http://localhost:3000/users/${$stateParams.userId}`)
@@ -18,13 +18,13 @@ export function PhotoItemController($http, $stateParams) {
             });
     }
 
-    function ratingInc(){
+    function like(){
         vm.photo.ratingCount += 1;
         vm.user.photos[$stateParams.photoId].ratingCount = vm.photo.ratingCount;
         $http.put(`http://localhost:3000/users/${$stateParams.userId}`, vm.user);
     }
 
-    function ratingDec(){
+    function dislike(){
         vm.photo.ratingCount -= 1;
         vm.user.photos[$stateParams.photoId].ratingCount = vm.photo.ratingCount;
         $http.put(`http://localhost:3000/users/${$stateParams.userId}`, vm.user);

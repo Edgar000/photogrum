@@ -38,7 +38,7 @@ describe('PhotoItemController', () => {
         it('should decrement rating counter and send updated data to backend for saving', () => {
             sut.photo = {ratingCount: 0};
             sut.user = {photos: [{ratingCount: 0}]};
-            sut.like();
+            sut.dislike();
             $httpBackend.expectPUT(`http://localhost:3000/users/${$stateParams.userId}`, {photos: [{ratingCount: -1}]})
                 .respond(200);
         });

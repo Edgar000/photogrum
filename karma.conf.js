@@ -1,5 +1,5 @@
 const webpackConfig = require('./webpack.config.karma');
-const reporters = (process.env.TDD_FLAG == '1') ? ['mocha'] : ['mocha', 'coverage'];
+const reporters = (process.env.TDD_FLAG === '1') ? ['mocha'] : ['mocha', 'coverage'];
 
 module.exports = (config) => {
     config.set({

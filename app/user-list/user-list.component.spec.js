@@ -1,6 +1,5 @@
 import {UserListController} from './user-list.component';
 
-
 describe('UserListController', () => {
     let sut;
     let $httpBackend;

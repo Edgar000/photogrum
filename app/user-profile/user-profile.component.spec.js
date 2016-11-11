@@ -1,6 +1,5 @@
 import {UserProfileController} from './user-profile.component';
 
-
 describe('UserProfileController', () => {
     let sut;
     let $httpBackend;
@@ -15,7 +14,7 @@ describe('UserProfileController', () => {
     describe('#activate', () => {
         it('should fetch and save user data from backend', () => {
             const expected = 'expected';
-            $httpBackend.expectGET(`http://localhost:3000/user${$stateParams.userId}`)
+            $httpBackend.expectGET(`http://localhost:3000/users/${$stateParams.userId}`)
                 .respond(200, expected);
             $httpBackend.flush();
             sut.user.should.equal(expected);

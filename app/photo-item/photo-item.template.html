@@ -1,0 +1,12 @@
+<div class="photo-item" ng-style="{'background-image':'url(' + $ctrl.photo.photoUrl + ')'}">
+    <div class="description-field">
+        {{$ctrl.photo.photoDescription}}
+    </div>
+    <div class="rating-field">
+        <i class="fa fa-thumbs-up like-button" ng-click="$ctrl.like()"></i>
+        <div class="rating-count">
+            {{$ctrl.photo.ratingCount}}
+        </div>
+        <i class="fa fa-thumbs-down dislike-button" ng-click="$ctrl.dislike()"></i>
+    </div>
+</div>

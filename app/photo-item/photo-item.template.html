@@ -3,10 +3,10 @@
         {{$ctrl.photo.photoDescription}}
     </div>
     <div class="rating-field">
-        <i class="fa fa-thumbs-up like-button" ng-click="$ctrl.ratingInc()"></i>
+        <i class="fa fa-thumbs-up like-button" ng-click="$ctrl.ratingInc($ctrl.user, $ctrl.photo)"></i>
         <div class="rating-count">
             {{$ctrl.photo.ratingCount}}
         </div>
-        <i class="fa fa-thumbs-down dislike-button" ng-click="$ctrl.ratingDec()"></i>
+        <i class="fa fa-thumbs-down dislike-button" ng-click="$ctrl.ratingDec($ctrl.user, $ctrl.photo)"></i>
     </div>
 </div>

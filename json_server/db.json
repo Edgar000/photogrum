@@ -29,7 +29,7 @@
           "photoId": 3,
           "photoUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/beweinreich/128.jpg",
           "photoDescription": "Accusantium minima ipsum.",
-          "ratingCount": 4
+          "ratingCount": -12
         },
         {
           "photoId": 4,

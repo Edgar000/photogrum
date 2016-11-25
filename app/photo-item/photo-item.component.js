@@ -6,27 +6,16 @@ export default {
     controller: PhotoItemController
 };
 
-export function PhotoItemController($stateParams, userDataService) {
+export function PhotoItemController($stateParams, ratingCountService) {
     'ngInject';
     const vm = this;
 
     activate();
-    vm.ratingInc = ratingInc;
-    vm.ratingDec = ratingDec;
+    vm.ratingInc = ratingCountService.ratingInc;
+    vm.ratingDec = ratingCountService.ratingDec;
 
     function  activate() {
         vm.user = vm.userData;
         vm.photo = vm.userData.photos[$stateParams.photoId];
-    }
-    function ratingInc() {
-        vm.photo.ratingCount += 1;
-        vm.user.photos[$stateParams.photoId].ratingCount = vm.photo.ratingCount;
-        userDataService.update({userId: $stateParams.userId}, vm.user);
-    }
-
-    function ratingDec() {
-        vm.photo.ratingCount -= 1;
-        vm.user.photos[$stateParams.photoId].ratingCount = vm.photo.ratingCount;
-        userDataService.update({userId: $stateParams.userId}, vm.user);
     }
 }

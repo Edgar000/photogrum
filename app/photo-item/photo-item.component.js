@@ -1,32 +1,32 @@
 export default {
     template: require('./photo-item.template.html'),
+    bindings: {
+        userData: '='
+    },
     controller: PhotoItemController
 };
 
-export function PhotoItemController($http, $stateParams) {
+export function PhotoItemController($stateParams, userDataService) {
     'ngInject';
     const vm = this;
+
     activate();
-    vm.like = like;
-    vm.dislike = dislike;
+    vm.ratingInc = ratingInc;
+    vm.ratingDec = ratingDec;
 
-    function activate(){
-        $http.get(`http://localhost:3000/users/${$stateParams.userId}`)
-            .then(({data}) => {
-                vm.user = data;
-                vm.photo = data.photos[$stateParams.photoId];
-            });
+    function  activate() {
+        vm.user = vm.userData;
+        vm.photo = vm.userData.photos[$stateParams.photoId];
     }
-
-    function like(){
+    function ratingInc() {
         vm.photo.ratingCount += 1;
         vm.user.photos[$stateParams.photoId].ratingCount = vm.photo.ratingCount;
-        $http.put(`http://localhost:3000/users/${$stateParams.userId}`, vm.user);
+        userDataService.update({userId: $stateParams.userId}, vm.user);
     }
 
-    function dislike(){
+    function ratingDec() {
         vm.photo.ratingCount -= 1;
         vm.user.photos[$stateParams.photoId].ratingCount = vm.photo.ratingCount;
-        $http.put(`http://localhost:3000/users/${$stateParams.userId}`, vm.user);
+        userDataService.update({userId: $stateParams.userId}, vm.user);
     }
 }

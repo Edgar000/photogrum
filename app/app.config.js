@@ -30,7 +30,13 @@ export default ($locationProvider, $stateProvider, $urlRouterProvider) => {
         })
         .state('photo-item', {
             url: '/users/:userId/photos/:photoId',
-            template: '<pg-photo-item></pg-photo-item>'
+            template: '<pg-photo-item user-data="$resolve.userData"></pg-photo-item>',
+            component: 'pgPhotoItem',
+            resolve: {
+                userData: ($stateParams, userDataService) => {
+                    return userDataService.get({userId: $stateParams.userId}).$promise;
+                }
+            }
         });
 
     $urlRouterProvider.otherwise('/dashboard');

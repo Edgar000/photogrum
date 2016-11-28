@@ -35,6 +35,7 @@ module.exports = {
             varsIgnorePattern: 'app'
         }],
         'prefer-const': 'error',
-        'no-var': 'error'
+        'no-var': 'error',
+        'angular/no-service-method': 0
     }
 };

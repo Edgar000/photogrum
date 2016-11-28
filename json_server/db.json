@@ -29,7 +29,7 @@
           "photoId": 3,
           "photoUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/beweinreich/128.jpg",
           "photoDescription": "Accusantium minima ipsum.",
-          "ratingCount": -12
+          "ratingCount": -10
         },
         {
           "photoId": 4,
@@ -41,7 +41,7 @@
           "photoId": 5,
           "photoUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/wikiziner/128.jpg",
           "photoDescription": "Est omnis nostrum.",
-          "ratingCount": -1
+          "ratingCount": -11
         }
       ]
     },

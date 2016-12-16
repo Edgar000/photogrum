@@ -24,14 +24,18 @@ export default ($locationProvider, $stateProvider, $urlRouterProvider) => {
             url: '/dashboard',
             template: '<pg-dashboard></pg-dashboard>'
         })
-        .state('photos', {
-            url: '/photos',
-            template: ''
-        })
         .state('photo-item', {
             url: '/users/:userId/photos/:photoId',
-            template: '<pg-photo-item user-data="$resolve.userData"></pg-photo-item>',
             component: 'pgPhotoItem',
+            resolve: {
+                userData: ($stateParams, userDataService) => {
+                    return userDataService.get({userId: $stateParams.userId}).$promise;
+                }
+            }
+        })
+        .state('photo-list', {
+            url: '/users/:userId/photos',
+            component: 'pgPhotoList',
             resolve: {
                 userData: ($stateParams, userDataService) => {
                     return userDataService.get({userId: $stateParams.userId}).$promise;

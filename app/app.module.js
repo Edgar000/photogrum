@@ -10,6 +10,7 @@ import mainFooter from './main-footer/main-footer.module';
 import registrationPage from './registration-page/registration-page.module';
 import dashboard from './dashboard/dashboard.module';
 import photoItem from './photo-item/photo-item.module';
+import photoList from './photo-list/photo-list.module';
 
 export default angular.module('app', [
     uiRouter,
@@ -21,5 +22,6 @@ export default angular.module('app', [
     mainFooter,
     registrationPage,
     dashboard,
-    photoItem
+    photoItem,
+    photoList
 ]).config(config);

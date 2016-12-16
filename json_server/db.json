@@ -11,13 +11,13 @@
           "photoId": 0,
           "photoUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/hellofeverrrr/128.jpg",
           "photoDescription": "Laudantium rerum iste officiis molestiae.",
-          "ratingCount": 10
+          "ratingCount": -12
         },
         {
           "photoId": 1,
           "photoUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/ffbel/128.jpg",
           "photoDescription": "Totam velit molestiae commodi cum.",
-          "ratingCount": 5
+          "ratingCount": 11
         },
         {
           "photoId": 2,
@@ -29,7 +29,7 @@
           "photoId": 3,
           "photoUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/beweinreich/128.jpg",
           "photoDescription": "Accusantium minima ipsum.",
-          "ratingCount": -10
+          "ratingCount": -9
         },
         {
           "photoId": 4,
@@ -56,7 +56,7 @@
           "photoId": 0,
           "photoUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/terpimost/128.jpg",
           "photoDescription": "Incidunt odit inventore.",
-          "ratingCount": -4
+          "ratingCount": -5
         },
         {
           "photoId": 1,
@@ -68,13 +68,13 @@
           "photoId": 2,
           "photoUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/leehambley/128.jpg",
           "photoDescription": "Natus ut voluptate beatae odio adipisci rerum autem voluptatibus.",
-          "ratingCount": 10
+          "ratingCount": 12
         },
         {
           "photoId": 3,
           "photoUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/h1brd/128.jpg",
           "photoDescription": "Iure tenetur sint provident.",
-          "ratingCount": 4
+          "ratingCount": 5
         },
         {
           "photoId": 4,
